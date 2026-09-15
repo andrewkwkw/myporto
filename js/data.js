@@ -2,7 +2,7 @@ const portfolioData = {
     profile: {
         name: "Andriawan",
         roles: [
-            "Software Engineer",
+            "Fullstack Developer",
             "System Architect and Analyst",
             "Beginner DevOps",
             "Cybersecurity (Blue Team)",
