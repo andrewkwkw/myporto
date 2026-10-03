@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
 }
 
 /* Custom Scrollbar */
@@ -10,47 +11,97 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #334155;
+    background: #27272a;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
-}
-
-/* Animation Delays for Blobs */
-.animation-delay-2000 {
-    animation-delay: 2s;
-}
-.animation-delay-4000 {
-    animation-delay: 4s;
+    background: #3f3f46;
 }
 
 /* Glassmorphism utilities */
-.glass {
-    background: rgba(30, 41, 59, 0.7);
+.glass-nav {
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+    background: rgba(24, 24, 27, 0.45);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 /* Hover lift effect */
 .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2), 0 8px 10px -6px rgba(99, 102, 241, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -10px rgba(168, 85, 247, 0.25);
 }
 
-/* Gradient Text */
-.text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+/* Animation utilities */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pulse Glow */
+.glow-purple {
+    box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.3);
+}
+
+/* Mobile menu slide down */
+.mobile-menu-enter {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.mobile-menu-enter-active {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Google Translate Widget & Banner Cleansing */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.skiptranslate iframe {
+    display: none !important;
+}
+
