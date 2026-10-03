@@ -49,6 +49,11 @@ const portfolioData = {
             image: "https://play-lh.googleusercontent.com/C1vCNTX_VjOFLYoGloRtt_AvC3GtPK1NSepbIlgKK93oaODhJBxkKE6Xu7NjZnciqNsq_k4s2G2K2i5QhYDI=w240-h480-rw"
         },
         {
+            name: "Junior Cybersecurity Analyst",
+            url: "https://www.credly.com/badges/279b9589-b2da-4863-bd0c-ff36bb00092a",
+            image: "https://images.credly.com/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/linkedin_thumb_image.png"
+        },
+        {
             name: "Intro to Cybersecurity",
             url: "https://www.credly.com/badges/2d85e9c4-0c29-4792-aeea-3ca2398df7e0",
             image: "https://www.netacad.com/p/ff9e491c-49be-4734-803e-a79e6e83dab1/badges/badge-images/introduction_to_cybersecurity_16.png",
