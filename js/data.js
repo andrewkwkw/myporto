@@ -51,7 +51,7 @@ const portfolioData = {
         {
             name: "Junior Cybersecurity Analyst",
             url: "https://www.credly.com/badges/279b9589-b2da-4863-bd0c-ff36bb00092a",
-            image: "https://images.credly.com/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/linkedin_thumb_image.png"
+            image: "assets/badges/cisco_junior_cybersecurity.png"
         },
         {
             name: "Intro to Cybersecurity",

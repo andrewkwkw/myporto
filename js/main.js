@@ -354,7 +354,7 @@ function renderLearningPlatforms() {
             anchor.style.animationDelay = `${index * 80}ms`;
             anchor.innerHTML = `
                 <div class="w-16 h-16 sm:w-20 sm:h-20 bg-zinc-900/80 rounded-2xl flex items-center justify-center p-3 border border-white/5 shadow-lg group-hover:border-purple-500/40 group-hover:scale-105 transition-all">
-                    <img src="${platform.image}" alt="${platform.name}" class="w-full h-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+                    <img src="${platform.image}" alt="${platform.name}" class="w-full h-full object-contain ${platform.scale || ''} filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
                 </div>
                 <span class="text-xs sm:text-sm font-medium text-zinc-400 group-hover:text-zinc-200 transition-colors text-center">${platform.name}</span>
             `;
