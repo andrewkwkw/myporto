@@ -1,4 +1,4 @@
-const enTranslations = {
+window.enTranslations = {
     profile: {
         greeting: "Hi, I'm",
         roles: [

@@ -68,12 +68,11 @@ function updateLanguageToggleButtons(lang) {
     });
 }
 
-function setLanguage(lang) {
-    if (lang === currentLang) return;
+window.setLanguage = function(lang) {
     currentLang = lang;
     localStorage.setItem('portfolio_lang', lang);
     applyLanguage(lang);
-}
+};
 
 function applyLanguage(lang) {
     document.documentElement.lang = lang;
@@ -82,8 +81,9 @@ function applyLanguage(lang) {
 
     const isEn = lang === 'en';
     const profile = portfolioData.profile;
-    const enProf = isEn && window.enTranslations ? window.enTranslations.profile : null;
-    const enUi = isEn && window.enTranslations ? window.enTranslations.ui : null;
+    const trans = window.enTranslations || (typeof enTranslations !== 'undefined' ? enTranslations : null);
+    const enProf = isEn && trans ? trans.profile : null;
+    const enUi = isEn && trans ? trans.ui : null;
 
     // Navigation Text
     const navText = isEn && enUi ? enUi.nav : {
@@ -373,7 +373,8 @@ function setupProjectFilters() {
         if (!btn) return;
         currentCategory = btn.getAttribute('data-filter');
         const isEn = currentLang === 'en';
-        const enUi = isEn && window.enTranslations ? window.enTranslations.ui : null;
+        const trans = window.enTranslations || (typeof enTranslations !== 'undefined' ? enTranslations : null);
+        const enUi = isEn && trans ? trans.ui : null;
         renderProjectFilterButtons(enUi ? enUi.projects : null);
         renderProjects(isEn);
     });
@@ -430,7 +431,8 @@ function renderProjects(isEn) {
         return;
     }
 
-    const enProjects = isEn && window.enTranslations ? window.enTranslations.projects : null;
+    const trans = window.enTranslations || (typeof enTranslations !== 'undefined' ? enTranslations : null);
+    const enProjects = isEn && trans ? trans.projects : null;
 
     projectsContainer.innerHTML = filtered.map((project, index) => {
         const enProj = enProjects ? enProjects[project.id] : null;
@@ -483,7 +485,8 @@ window.openModal = function(projectId) {
     if (!project || !modal) return;
 
     const isEn = currentLang === 'en';
-    const enProj = isEn && window.enTranslations && window.enTranslations.projects ? window.enTranslations.projects[projectId] : null;
+    const trans = window.enTranslations || (typeof enTranslations !== 'undefined' ? enTranslations : null);
+    const enProj = isEn && trans && trans.projects ? trans.projects[projectId] : null;
     const title = enProj ? enProj.title : project.title;
     const fullDesc = enProj ? enProj.fullDescription : (project.fullDescription || project.description);
 

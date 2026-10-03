@@ -72,8 +72,8 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <!-- Language Switcher Pill -->
                     <div class="flex items-center bg-zinc-900 border border-white/10 rounded-full p-1 text-xs shadow-inner">
-                        <button type="button" id="lang-btn-id" class="px-2.5 py-1 rounded-full transition-all duration-200 text-white bg-purple-600 shadow-sm font-bold">ID</button>
-                        <button type="button" id="lang-btn-en" class="px-2.5 py-1 rounded-full transition-all duration-200 text-zinc-400 hover:text-white font-medium">EN</button>
+                        <button type="button" id="lang-btn-id" onclick="setLanguage('id')" class="px-2.5 py-1 rounded-full transition-all duration-200 text-white bg-purple-600 shadow-sm font-bold">ID</button>
+                        <button type="button" id="lang-btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-full transition-all duration-200 text-zinc-400 hover:text-white font-medium">EN</button>
                     </div>
 
                     <div id="navbar-socials" class="flex gap-2 pl-1 border-l border-white/10"></div>
@@ -87,8 +87,8 @@
                 <!-- Mobile Action Area: Language Switcher & Hamburger Toggle -->
                 <div class="flex items-center gap-3 md:hidden">
                     <div class="flex items-center bg-zinc-900 border border-white/10 rounded-full p-0.5 text-xs">
-                        <button type="button" id="mobile-lang-btn-id" class="px-2.5 py-1 rounded-full transition-all text-white bg-purple-600 font-bold">ID</button>
-                        <button type="button" id="mobile-lang-btn-en" class="px-2.5 py-1 rounded-full transition-all text-zinc-400 hover:text-white font-medium">EN</button>
+                        <button type="button" id="mobile-lang-btn-id" onclick="setLanguage('id')" class="px-2.5 py-1 rounded-full transition-all text-white bg-purple-600 font-bold">ID</button>
+                        <button type="button" id="mobile-lang-btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 rounded-full transition-all text-zinc-400 hover:text-white font-medium">EN</button>
                     </div>
 
                     <button type="button" id="mobile-menu-btn"
@@ -349,9 +349,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/data.js"></script>
-    <script src="js/translations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/data.js?v=2.0"></script>
+    <script src="js/translations.js?v=2.0"></script>
+    <script src="js/main.js?v=2.0"></script>
 </body>
 
 </html>
